@@ -2,18 +2,19 @@
 # while utilizing builtin Python string operators
 # such as title(), r/ljust(), center(), et. al.,
 
-# Header for the Menu's title, formatted accordingly
-header = "  quality cookery menu  "
-titled_header = header.title()
-centered_header = titled_header.center(30, "=")
+# Header for the Menu's title, formatted accordingly and menu list
+# Utilizing tuples, no need for mutability
+header = "  quality cookery menu  ".title().center(30, "=")
+food = ("Takoyaki 5pc", "Takoyaki 10pc", "Taiyaki Small",
+        "Taiyaki Large", "PIzza (12 inch)", "Pizza (16 inch)")
 
 # Adding Menu items for display - utilizng print
 # and justifications for now
-print("\n" + centered_header)
-print("Takoyaki 5pc".ljust(28, ".") + "$5".rjust(2))
-print("Takoyaki 10pc".ljust(28, ".") + "$8".rjust(2))
-print("Taiyaki Small".ljust(28, ".") + "$5".rjust(2))
-print("Taiyaki Large".ljust(28, ".") + "$8".rjust(2))
-print("Pizza (12 inch)".ljust(28, ".") + "$10".rjust(2))
-print("Pizza (16 inch)".ljust(28, ".") + "$15".rjust(2))
+print("\n" + header)
+print(food[0].ljust(28, ".") + "$5".rjust(2))
+print(food[1].ljust(28, ".") + "$8".rjust(2))
+print(food[2].ljust(28, ".") + "$5".rjust(2))
+print(food[3].ljust(28, ".") + "$8".rjust(2))
+print(food[4].ljust(28, ".") + "$10".rjust(2))
+print(food[5].ljust(28, ".") + "$15".rjust(2))
 print()
